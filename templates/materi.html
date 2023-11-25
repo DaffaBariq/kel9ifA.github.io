@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kalkulus 1</title>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='style.css') }}"
+/>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Kalkulus</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">BERANDA</a></li>
+                    <li><a href="#">MATERI</a></li>
+                    <li><a href="{{ url_for('kalkulator') }}">KALKULATOR</a></li>
+                    <li><a href="{{ url_for('tentang') }}">TENTANG</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="tengah">
+            <div class="isijudul">
+                <div class="sub">
+
+                <h1>TRIGONOMETRI</h1>
+                <br>
+                </div>
+                <div class="narasi">
+                    <p> Trigonometri merupakan cabang ilmu matematika yang membahas </p>
+                    <p> tentang hubungan sisi serta sudut yang ada pada segitiga.</p>
+                    <p> Hubungan tersebut umumnya disebut sebagai perbandingan sinus, kosinus, dan juga tangen.</p>
+                    <p>Ada 6 fungsi trigonometri yaitu sinus, cosinus, tangen, secan, cosecan, dan kotangen. </p>   
+                    <p>Sementara, sisi segitiga siku-siku adalah sisi tegak lurus, sisi miring, dan alas, </p>
+                    <p>yang digunakan untuk menghitung nilai fungsi trigonometri itu sendiri.</p>
+                </div>
+          </div>
+        </div>
+        
+    </div>  
+</body>
+</html>

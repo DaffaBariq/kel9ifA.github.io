@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kalkulus 1</title>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='style.css') }}"
+/>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Kalkulus</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">BERANDA</a></li>
+                    <li><a href="{{ url_for('materi')}}">MATERI</a></li>
+                    <li><a href="{{ url_for('kalkulator') }}">KALKULATOR</a></li>
+                    <li><a href="#">TENTANG</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub">
+            <h1 class="penyusun">Penyusun</h1>
+        </div>
+        <div class="isi">
+            <main class="grid">
+                <article>
+                    <img src="{{ url_for('static', filename='dred.jpg') }}" width="250" height="333" alt="Daffa Bariq Suwandi Image ">
+                    <div class="konten">
+                        <h1>Daffa Bariq Suwandi</h1>
+                        <h2>237006021</h2>
+                    </div>
+                </article>
+                <article>
+                    <img src="{{ url_for('static', filename='shin.jpg') }}" width="250" height="333" alt="Shinvi Nur Najmil J. Image"> 
+                    <div class="konten">
+                        <h1>Shinvi Nur Najmil J.</h1>
+                        <h2>237006008</h2>
+                    </div>
+                </article>
+                <article>
+                    <img src="{{ url_for('static', filename='dik.jpeg') }}" width="250" height="333" alt="Dikri Asrul Fauzi Image">
+                    <div class="konten">
+                        <h1>Dikri Asrul Fauzi</h1>
+                        <h2>237006039</h2>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+
+           </div>   
+</body>
+</html>

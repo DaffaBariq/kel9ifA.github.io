@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kalkulus 1</title>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='style.css') }}"
+/>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Kalkulus</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">BERANDA</a></li>
+                    <li><a href="{{ url_for('materi')}}">MATERI</a></li>
+                    <li><a href="{{ url_for('kalkulator') }}">KALKULATOR</a></li>
+                    <li><a href="{{ url_for('tentang') }}">TENTANG</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tengah">
+            <div class="isijudul">
+                <div class="sub">
+                <h1>KALKULATOR SEDERHANA</h1>
+                <h1>TRIGONOMETRI</h1>
+                <br>
+                </div>
+                <div class="narasi">
+                    <p>Kalkulator sederhana ini dibuat untuk memenuhi tugas akhir semester 1</p>
+                    <p>Mata kuliah Kalkulus 1</p>
+                    <p>Dosen pengampu : Euis Nur Fitriani Dewi., S.T., M.Kom.</p>
+                </div>
+          </div>
+        </div>
+        
+    </div>  
+</body>
+</html>

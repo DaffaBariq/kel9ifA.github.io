@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kalkulus 1</title>
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="{{ url_for('static', filename='style.css') }}"
+    />
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Kalkulus</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">BERANDA</a></li>
+                    <li><a href="{{ url_for('materi')}}">MATERI</a></li>
+                    <li><a href="#">KALKULATOR</a></li>
+                    <li><a href="{{ url_for('tentang') }}">TENTANG</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tengah">
+            <form action="/calculate" method="post">
+                <label for="angle">Masukkan besar sudut dalam derajat:</label>
+                <input type="text" name="angle" required>
+            
+                <label for="function">Pilih fungsi trigonometri:</label>
+                <select name="function" required>
+                    <option value="sinus">Sinus</option>
+                    <option value="cosinus">Cosinus</option>
+                    <option value="tangen">Tangen</option>
+                    <option value="semua">Semua</option>
+                </select>
+            
+                <input type="submit" value="Hitung">
+            </form>
+            
+            <div id="result">
+                {% if result %}
+                    <p>{{ result }}</p>
+                {% endif %}
+            </div>
+            
+
+        </div>
+        
+    </div>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tengah {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        #result p {
+            margin: 0;
+        }
+    </style>
+    
+</body>
+</html>
